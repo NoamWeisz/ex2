@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceList.h" />
+    <ClInclude Include="ProfileList.h" />
+    <ClInclude Include="SocialNetwork.h" />
     <ClInclude Include="Page.h" />
     <ClInclude Include="profile.h" />
     <ClInclude Include="User.h" />
@@ -139,6 +141,8 @@
     <ClCompile Include="DeviceList.cpp" />
     <ClCompile Include="Page.cpp" />
     <ClCompile Include="profile.cpp" />
+    <ClCompile Include="ProfileList.cpp" />
+    <ClCompile Include="SocialNetwork.cpp" />
     <ClCompile Include="test1Device.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="UserList.cpp" />
