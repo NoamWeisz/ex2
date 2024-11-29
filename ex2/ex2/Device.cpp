@@ -33,10 +33,10 @@ unsigned int Device::getID()const
 {
 	return id;
 }
-void Device::init(unsigned int Phoneid, DeviceType Phonetype,
-	std::string Phoneos)
+void Device::init(const unsigned int Phoneid, const DeviceType Phonetype,
+	const std::string Phoneos)
 {
-	id = Phoneid;
-	type = Phonetype;
-	OStype = Phoneos;
+	this->id = Phoneid;
+	this->type = Phonetype;
+	this->OStype = Phoneos;
 }
