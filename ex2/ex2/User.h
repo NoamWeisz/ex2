@@ -10,8 +10,6 @@ private:
 	std::string username;
 	unsigned int age;
 	DevicesList *list;
-	unsigned int countDevice;
-
 public:
 	void init(unsigned int id,std::string username,unsigned int age);
 	void clear();

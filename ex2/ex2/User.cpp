@@ -9,7 +9,6 @@ void User::init(unsigned int id, std::string username, unsigned int age)
 	this->username = username;
 	this->age = age;
 	this->list = new DevicesList;
-	this->countDevice = 0;
 	this->list->set_first(nullptr);
 }
 
@@ -65,6 +64,10 @@ void User::addDevice(Device newDevice)
 
 void User::clear()
 {
+	id = 0;
+	username = "";
+	age = 0;
 	list->clear();
 	delete(list);
+	list = nullptr;
 }
