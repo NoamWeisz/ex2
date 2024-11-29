@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿/*
+#include <iostream>
 #include <windows.h> // WinApi header - needed for setting console color
 #include <random>
 
@@ -294,3 +295,4 @@ int main()
 
     return 0;
 }
+*/

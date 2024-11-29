@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceList.h" />
+    <ClInclude Include="Page.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceList.cpp" />
+    <ClCompile Include="Page.cpp" />
     <ClCompile Include="test1Device.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
