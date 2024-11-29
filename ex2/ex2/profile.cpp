@@ -1,7 +1,8 @@
 #include <iostream>
 #include "profile.h"
 
-void Profile::init(User owner)
+//init function set new profile object
+void Profile::init(const User owner)
 {
 	this->owner = new User;
 	this->PageOwner = new page;
@@ -11,35 +12,39 @@ void Profile::init(User owner)
 	PageOwner->init();
 }
 
-void Profile::clear()const
+//clear object clear the memory of the heap in the object
+void Profile::clear()
 {
 	delete(this->owner);
 	delete(this->PageOwner);
 	delete(this->friendsList);
 }
 
-
+//getOwner object return a user object that he is the owner of the profile
 User Profile::getOwner()const
 {
 	return *this->owner;
 }
 
-void Profile::setStatus(std::string new_status)
+//setStatus function set/change status in the profile
+void Profile::setStatus(const std::string new_status)
 {
 	this->PageOwner->setStatus(new_status);
 }
 
-void Profile::addPostToProfilePage(std::string post)
+//addPostToProfilePage function adds new post to the profile
+void Profile::addPostToProfilePage(const std::string post)
 {
 	this->PageOwner->addLineToPosts(post);
 }
 
-void Profile::addFriend(User friend_to_add)
+//addFriend function add new friend to the profile
+void Profile::addFriend(const User friend_to_add)
 {
 	this->friendsList->add(friend_to_add);
 
 }
-
+//getPage return the page of the profile
 std::string Profile::getPage()const
 {
 	std::string rString = "";
@@ -54,15 +59,16 @@ std::string Profile::getPage()const
 
 
 
-
-std::string Profile::getFriends()
+//getFriends function return all the friends of the profile
+std::string Profile::getFriends()const
 {
 	std::string Rstring = "";
+	UserNode* curr = NULL;
 	if (this->friendsList == nullptr)
 	{
 		return "";
 	}
-	UserNode* curr = friendsList->get_first();
+	curr = friendsList->get_first();
 
 	if (curr == nullptr)
 	{
@@ -80,7 +86,9 @@ std::string Profile::getFriends()
 	return Rstring;
 }
 
-std::string Profile::getFriendsWithSameNameLength()
+//getFriendsWithSameNameLength function returns all the
+// friends with the same length like the user name length
+std::string Profile::getFriendsWithSameNameLength()const
 {
 	std::string Rstring = "";
 	unsigned int len = 0;

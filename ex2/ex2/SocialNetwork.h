@@ -3,16 +3,19 @@
 #include "profile.h"
 #include "ProfileList.h"
 
+
+//SocialNetwork class for  SocialNetwork object
 class SocialNetwork
 {
-public:
-	void init(std::string networkName, int minAge);
+public: //methods
+	void init(const std::string networkName,const int minAge);
 	void clear();
-	std::string getNetworkName();
-	int getMinAge();
-	bool addProfile(Profile profile_to_add);
-	std::string getWindowsDevices();
-private:
+	std::string getNetworkName()const;
+	int getMinAge()const;
+	bool addProfile(const Profile profile_to_add);
+	std::string getWindowsDevices()const;
+
+private://parameters
 	std::string NetName;
 	ProfileList* list;
 	unsigned int MinAge;

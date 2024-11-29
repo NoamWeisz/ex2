@@ -1,7 +1,8 @@
 #include <iostream>
 #include "SocialNetwork.h"
 
-void SocialNetwork::init(std::string networkName, int minAge)
+//init function set new SocialNetwork object
+void SocialNetwork::init(const std::string networkName,const int minAge)
 {
 	this->NetName = networkName;
 	this->MinAge = minAge;
@@ -9,6 +10,7 @@ void SocialNetwork::init(std::string networkName, int minAge)
 	this->list->set_first(nullptr);
 }
 
+//clear function clear the object and all the memory in the heap
 void SocialNetwork::clear()
 {
 	this->NetName = "";
@@ -17,17 +19,20 @@ void SocialNetwork::clear()
 	list = NULL;
 }
 
-std::string SocialNetwork::getNetworkName()
+//getNetworkName function returns the name of the Social Network
+std::string SocialNetwork::getNetworkName()const
 {
 	return this->NetName;
 }
 
-int SocialNetwork::getMinAge()
+//getMinAge function returns the minimum age of the Social Network
+int SocialNetwork::getMinAge()const
 {
 	return this->MinAge;
 }
 
-bool SocialNetwork::addProfile(Profile profile_to_add)
+//addProfile function returns true or false if adding new friends is succsed 
+bool SocialNetwork::addProfile(const Profile profile_to_add)
 {
 	User curr = profile_to_add.getOwner();
 	bool result = true;
@@ -38,7 +43,9 @@ bool SocialNetwork::addProfile(Profile profile_to_add)
 	result = this->list->add(profile_to_add);
 	return result;
 }
-std::string SocialNetwork::getWindowsDevices()
+
+//getWindowsDevices function returns string with all the devices of the user that used windows as OS
+std::string SocialNetwork::getWindowsDevices()const
 {
 	unsigned int ID = 0;
 	std::string Rstring = "";

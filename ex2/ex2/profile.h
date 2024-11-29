@@ -7,21 +7,23 @@
 #include "DeviceList.h"
 
 
+//class profile for profile object 
+
 class Profile
 {
-private:
+private: //parameters
 	User* owner;
 	page* PageOwner;
 	UserList* friendsList;
 
-public:
-	void init(User owner);
-	void clear()const;
+public: //methods
+	void init(const User owner);
+	void clear();
 	User getOwner()const;
-	void setStatus(std::string new_status);
-	void addPostToProfilePage(std::string post);
-	void addFriend(User friend_to_add);
+	void setStatus(const std::string new_status);
+	void addPostToProfilePage(const std::string post);
+	void addFriend(const User friend_to_add);
 	std::string getPage()const;
-	std::string getFriends();
-	std::string getFriendsWithSameNameLength();
+	std::string getFriends()const;
+	std::string getFriendsWithSameNameLength()const;
 };

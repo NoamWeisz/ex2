@@ -22,17 +22,19 @@ enum DeviceType { PHONE, PC, LAPTOP, TABLET };		     //
 														 //
 /// ///////////////////////////////////////////////////////
 
-
+/*
+device class for device object
+*/
 class Device
 {
-private:
+private: //parameters
 	std::string OStype;
 	bool mood;
 	unsigned int id;
 	DeviceType type;
 
 public:
-	void activate();
+	void activate(); //methods
 	void deactivate();
 	void init(const unsigned int Phoneid,const DeviceType Phonetype,const std::string Phoneos);
 	std::string getOS()const;
